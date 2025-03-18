@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<link href="https://pyscript.net/alpha/pyscript.css" rel="stylesheet"></link> <script defer="defer" src="https://pyscript.net/alpha/pyscript.js"></script> w
+<py-script>from flask import Flask, render_template, request, redirect, url_for</py-script>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mon Site{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='map.js') }}" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenue sur notre site automobile</h1>
+    </header>
+
+    <nav>
+        <ul>
+            {% for link in menu_links %}
+                <li><a href="{{  http://127.0.0.1:5000/ }}">{{ link.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+</body>
+</html>

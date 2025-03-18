@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: red;
+    color: white;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.image-container img {
+    width: 300px;
+    margin-top: 20px;
+}
+
+.map-container {
+    margin-top: 20px;
+}
+
+#map {
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    background-color: gray;
+}

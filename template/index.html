@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+    <section class="image-container">
+        <h2>Flash McQueen</h2>
+        <img src="{{ url_for('static', filename='images/flash_mcqueen.jpg') }}" alt="Flash McQueen">
+    </section>
+
+    <section class="map-container">
+        <h2>Nos concessions automobiles</h2>
+        <div id="map"></div>
+    </section>
+{% endblock %}
