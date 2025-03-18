@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-import folium
+
 
 app = Flask(__name__)
 
@@ -25,4 +25,4 @@ def about():
     return render_template('about.html', menu_links=menu_links)
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
