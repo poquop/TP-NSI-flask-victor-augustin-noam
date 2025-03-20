@@ -7,13 +7,13 @@ menu_links = [
     {"name": "Accueil", "url": "/"},
     {"name": "Concessions", "url": "/concessions"},
     {"name": "À propos", "url": "/about"},
-    {"name": "rajouter un lien", "url" : "/ajoutage"}
+    {"name": "rajouter un lien", "url" : "/page_pour_add"}
 ]
 
 links = []
-@app.route('/ajoutage')
+@app.route('/page_pour_add')
 def ajoutage():
-    return render_template('page_pour_ajouter', menu_links[3])
+    return render_template('page_pour_add.html', menu_links=menu_links)
 
 @app.route('/')
 def index():
