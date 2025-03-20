@@ -15,7 +15,7 @@
     <nav>
         <ul>
             {% for link in menu_links %}
-                <li><a href="{{'none'}}">{{ link.name }}</a></li>
+                <li><a href="{{ link.url }}" >{{ link.name }}</a></li>
             {% endfor %}
         </ul>
     </nav>
