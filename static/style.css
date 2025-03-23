@@ -27,7 +27,7 @@ nav ul li a {
 }
 
 .image-container img {
-    width: 800px;
+    width: 500px;
     margin-top: 20px;
 }
 
@@ -40,4 +40,9 @@ nav ul li a {
     height: 400px;
     margin: auto;
     background-color: gray;
+}
+
+.main-content {
+    display:flex;
+    justify-content: space-evenly;
 }

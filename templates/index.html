@@ -3,10 +3,21 @@
 {% block title %}Accueil{% endblock %}
 
 {% block content %}
-    <section class="image-container">
-        <h2>Flash McQueen</h2>
-        <img src="static\cars.jpg">  </img>
-    </section>
+
+<section class="main-content" >
+    <div class="map-container">
+        <h2>Nos concessions automobiles</h2>
+        <ul>
+            <li>Ferrari</li>
+            <li>Buggati</li>
+            <li>Renault</li>
+        </ul>
+    </div>
+
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='cars.jpg') }}" alt="Flash McQueen">
+    </div>
+</section>
 
 
 {% endblock %}
