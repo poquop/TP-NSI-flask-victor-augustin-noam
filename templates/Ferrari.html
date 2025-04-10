@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}À Propos{% endblock %}
+    
+    {% block content %}
+        <h2>À propos de nous</h2>
+        <p>Bienvenue sur notre site automobile. Nous vendons les meilleures voitures du monde !</p>
+        <img src="{{ url_for('static', filename='ferrari.jpg') }}" alt="Ferrari" class="car-image">
+        <p>La Ferrari est une marque italienne de voitures de sport et de luxe, connue pour ses performances exceptionnelles et son design emblématique.</p>
+    {% endblock %}
