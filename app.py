@@ -3,6 +3,38 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify
 
 app = Flask(__name__)
 
+DATABASE = 'data/data.db'
+PROF_PASSWORD = "secret123" # A changer peut-être '-'
+
+# Pour les deux fonctions suivantes, j'ai copié collé le code d'exemple du prof
+# Fonction générique pour exécuter une requête SELECT et récupérer les résultats sous forme de liste de dictionnaires
+def fetch_all(query, params=()):
+    conn = sqlite3.connect(DATABASE)
+    conn.row_factory = sqlite3.Row 
+    cursor = conn.cursor()
+    cursor.execute(query, params)
+    results = [dict(row) for row in cursor.fetchall()]  
+    conn.close()
+    return results
+
+# Fonction générique pour exécuter une requête INSERT, UPDATE ou DELETE
+def execute_query(query, params=()):
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    cursor.execute(query, params)
+    conn.commit()  
+    last_id = cursor.lastrowid  
+    conn.close()
+    return last_id
+
+# Pour le reste du code, j'ai codé en fonction des besoins.
+
+
+
+
+
+
+
 menu_links = [
     {"name": "Accueil", "url": "/"},
     {"name": "Concessions", "url": "/concessions"},
