@@ -1,24 +1,33 @@
---
---(C'est pas fini, je viens de commencer.)
---
 DROP TABLE IF EXISTS Marque;
-DROP TABLE IF EXISTS Model;
-DROP TABLE IF EXISTS Voiture;
+DROP TABLE IF EXISTS Modele; --Voitures
 
 CREATE TABLE Marque(
    idMarque INTEGER PRIMARY KEY AUTOINCREMENT,
    Nom VARCHAR(40),
-   Nationalite VARCHAR(40)
+   Pays VARCHAR(40)
 );
 
-CREATE TABLE Model(
-    idModel INTEGER PRIMARY KEY AUTOINCREMENT,
-    
-
+CREATE TABLE Modele(
+    idModele INTEGER PRIMARY KEY AUTOINCREMENT,
+    Nom VARCHAR(80),
+    idMarque INT,
+    Date INT, 
+    CONSTRAINT fk_marque FOREIGN KEY (idMarque) REFERENCES Marque(idMarque)
 );
   
-CREATE TABLE Voiture(
-    idVoiture INTEGER PRIMARY KEY AUTOINCREMENT,
-    CONSTRAINT pk_marque PRIMARY KEY (idMarque),
-    CONSTRAINT pk_model PRIMARY KEY (idModel)
-);
+INSERT INTO Marque(Nom, Pays) VALUES
+('Alfa Romeo', 'Italie'),
+('Aston Martin', 'Angleterre'),
+('Bugatti', 'France'),
+('Corvette', 'Etats-Unis'),
+('Mclaren', 'Angleterre'),
+('Pagani', 'Italie'),
+('Ferrari', 'Italie'),
+('Porshe', 'Allemagne'),
+('Mercedes', 'Allemagne'),
+('BMW', 'Allemagne'),
+('Lamborghini', 'Italie'),
+('Toyota', 'Japon'),
+('Nissan', 'Japon'),
+('Koenigsegg', 'Suède')
+;
