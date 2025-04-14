@@ -27,12 +27,15 @@ def execute_query(query, params=()):
     conn.close()
     return last_id
 
-# Pour le reste du code, j'ai codé en fonction des besoins.
+# Pour le reste du code, j'ai codé en fonction des besoins que j'ai pensé utile par rapport au cahier des charges.
+def get_marques():
+    return fetch_all("SELECT idMarque, Nom, Pays FROM Marque")
 
-
-
-
-
+def get_modeles():
+    return fetch_all("""SELECT mo.idModele, mo.Nom, mo.idModele 
+                          FROM Modele mo, Marque ma
+                           AND ma.idModele == ma.idModele """")
+############# A continuer...
 
 
 menu_links = [
