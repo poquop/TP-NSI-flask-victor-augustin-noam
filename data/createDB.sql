@@ -12,7 +12,6 @@ CREATE TABLE Modele(
     idModele INTEGER PRIMARY KEY AUTOINCREMENT,
     Nom VARCHAR(80),
     idMarque INT,
-    Date INT, 
     CONSTRAINT fk_marque FOREIGN KEY (idMarque) REFERENCES Marque(idMarque)
 );
 
@@ -31,4 +30,8 @@ INSERT INTO Marque(Nom, Pays) VALUES
 ('Toyota', 'Japon'),
 ('Nissan', 'Japon'),
 ('Koenigsegg', 'Suède')
+;
+
+INSERT INTO Modele(Nom, idMarque) VALUES
+('', '')
 ;
