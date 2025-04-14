@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Buggati{% endblock %}
+    
+    {% block content %}
+        <h2>À propos de Buggati</h2>
+        <p>Bienvenue sur notre site automobile. Nous vendons les meilleures voitures du monde !</p>
+        <img src="{{ url_for('static', filename='bugatti.jpg') }}" alt="Buggati" class="car-image">
+        <p>La Buggati est une marque française de voitures de luxe, connue pour ses performances exceptionnelles et son design emblématique.</p>
+    {% endblock %}
