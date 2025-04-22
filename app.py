@@ -35,7 +35,7 @@ def get_modeles():
     return fetch_all("""SELECT mo.idModele, mo.Nom, mo.idModele 
                           FROM Modele mo, Marque ma
                            AND ma.idModele == ma.idModele """")
-############# A continuer...
+############# A continuer... ou pas.
 
 
 menu_links = [
